@@ -1,0 +1,143 @@
+body, html {
+    margin:0;
+    background-color: black;
+    height:100%;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+a:active, a:hover, a:visited {
+    color: inherit;
+}
+
+.name {
+    position: absolute;
+    font-size: 11vw;
+    width:100%;
+    margin:0;
+    top: calc(50% - height);
+    white-space: nowrap;
+    text-align: center;
+}
+
+@keyframes grow{
+    0% {width: 1%}
+    100% {width: 80%}
+}
+
+.name .underline {
+    height:1px; 
+    width: 80%;
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    display: block;
+    border-bottom:1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.focus {
+    background-color: white;
+    position: relative;
+    height: 70%;
+    width: 90%;
+    transition: width 0.5s;
+    background-image: url("ht.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay {
+    width:100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+}
+
+.links {
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-style: italic;
+    font-size: 11px;
+}
+
+.links a{
+    margin-bottom: 5px;
+}
+
+.gallery {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    display: flex;
+    overflow: hidden;
+}
+
+.gallery.active {
+    display: flex;
+}
+
+.gallery .item {
+    background-color:white;
+    width: 33.33%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.scrolldown {
+    bottom: 100%;
+    transition: bottom 1s;
+}
+
+.gallery.active > .scrolldown{
+    bottom: 0;
+} 
+
+.scrollup {
+    top: 100%;
+    transition: top 1s;
+}
+
+.gallery.active > .scrollup{
+    top: 0;
+} 
+
+@media only screen and (max-width: 768px) {
+    .focus {
+        width: 100%;
+    }
+
+    .name .firstname{
+        white-space: normal;
+        font-size: 20vw;
+    }
+}

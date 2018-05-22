@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hannah T.</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Nunito" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#gallery1link").hover(function(){
+                $("#gallery1").addClass('active');
+            });
+            $("#gallery1link").mouseleave(function(){
+                $("#gallery1").removeClass('active');
+            });
+
+             $("#gallery2link").hover(function(){
+                $("#gallery2").addClass('active');
+            });
+            $("#gallery2link").mouseleave(function(){
+                $("#gallery2").removeClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+            <div class='focus'>
+                <div id="gallery1" class='gallery'>
+                    <div style="background-image: url('images/photo2.jpg')" class='item scrolldown'></div>
+                    <div style="background-image: url('images/photo1.jpg')" class='item scrollup'></div>
+                    <div style="background-image: url('images/photo3.jpg')" class='item scrolldown'></div>
+                </div>
+                <div id = "gallery2" class='gallery'>
+                    <div style="background-image: url('images/photo4.jpg')" class='item scrolldown'></div>
+                    <div style="background-image: url('images/photo5.jpg')" class='item scrollup'></div>
+                    <div style="background-image: url('images/photo6.jpg')" class='item scrolldown'></div>
+                </div>
+                <div class='overlay'></div> 
+            </div>
+            <h1 class='name'>
+                <span class='firstname'>HANNAH</span> 
+                <span class='lastname'>TOSELLO.</span>
+                <span class='underline'></span>
+            </h1>
+            <div class='links'>
+                <a id ="gallery1link" target="_blank" href='http://instragram.com/hantosello'>hantosello</a>
+                <a id ="gallery2link" target="_blank" href='http://instagram.com/hannahtastyy'>hannahtastyy</a>
+            </div>
+    </div>
+</body>
+</html>
